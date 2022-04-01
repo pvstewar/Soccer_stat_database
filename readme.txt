@@ -12,18 +12,19 @@ and how to establish a virtual python environment for this project.
 3) Datasets for importing:
 The plan is to download the following datasets and complile them to create a database to accomplish
 the project goals. The following datasets are uploaded to the git project folder:
-	a) teams_fifa22.csv - https://www.kaggle.com/datasets/cashncarry/fifa-22-complete-player-dataset
+	a) teams_fifa22.csv(teams) - https://www.kaggle.com/datasets/cashncarry/fifa-22-complete-player-dataset
 		-Team statistics from FIFA 22 video game
-	b) players_fifa22.csv - https://www.kaggle.com/datasets/cashncarry/fifa-22-complete-player-dataset
+	b) players_fifa22.csv(plyr_atr) - https://www.kaggle.com/datasets/cashncarry/fifa-22-complete-player-dataset
 		-Player attribute ratings from FIFA 22 game
-	c) league.csv - https://www.kaggle.com/datasets/jehanbhathena/big-5-european-football-leagues-stats/download
+	c) league.csv(league) - https://www.kaggle.com/datasets/jehanbhathena/big-5-european-football-leagues-stats/download
 		-Team stats from big 5 European soccer leagues
-	d) plyr_stat.csv - https://www.kaggle.com/datasets/shushrutsharma/top-5-football-leagues/download
+	d) plyr_stat.csv(plyr_stat) - https://www.kaggle.com/datasets/shushrutsharma/top-5-football-leagues/download
 		-Player statistics data from big 5 European soccer league
-	e) plyr_shot.csv - https://www.kaggle.com/datasets/shushrutsharma/top-5-football-leagues/download
+	e) plyr_shot.csv(plyr_shot) - https://www.kaggle.com/datasets/shushrutsharma/top-5-football-leagues/download
 
 4)DB design plan:
 	a)Create sqlite database with each csv file imported as a table.
 	b)Most datatypes should be either INTEGER, REAL or TEXT.
-	c)Will need to decide on primary key for each table.
+	c)Each table either has a column designated as primary key or if no columns contain all unique values, an index is 
+	set in the creation of the table.
 
